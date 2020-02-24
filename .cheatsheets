@@ -1,0 +1,3 @@
+alias cspacman="cat ./Projects/CheatSheets/PACMAN.cheatsheet"
+alias csgit="cat ./Projects/CheatSheets/GIT.cheatsheet"
+alias csssh="cat ./Projects/CheatSheets/SSH.cheatsheet"
