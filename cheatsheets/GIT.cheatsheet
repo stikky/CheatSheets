@@ -2,7 +2,7 @@ Config
 git config --global color.ui auto                   Enables helpful colorization of command line output
 git config --global user.email "[email address]"    Sets the email you want attached to your commit transactions
 git config --global user.name "[name]"              Sets the name you want attached to your commit transactions
-git config --local *.*                              Same as above but for single repositories.
+git config *.*                                      Same as above but for single repositories.
 
 
 GIT_AUTHOR_NAME is the human-readable name in the author field.
