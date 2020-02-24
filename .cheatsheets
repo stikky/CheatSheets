@@ -1,7 +1,8 @@
 
 # Change CSPATH to your 'CheatSheets' folder location
-CSPATH='/home/foo/bar/cheatsheets'
+CSPATH='/home/gms/Projects/CheatSheets/cheatsheets'
 
-alias cspacman="cat $CSPATH/PACMAN.cheatsheet"
 alias csgit="cat $CSPATH/GIT.cheatsheet"
+alias cspacman="cat $CSPATH/PACMAN.cheatsheet"
 alias csssh="cat $CSPATH/SSH.cheatsheet"
+alias csssh="cat $CSPATH/YADM.cheatsheet"
