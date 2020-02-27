@@ -8,3 +8,10 @@ Start the ssh-agent in the background.
 
 Add your SSH private key to the ssh-agent. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_rsa in the command with the name of your private key file.
     $ ssh-add ~/.ssh/id_rsa
+
+Copy key to server
+    ssh-copy-id -i ~/.ssh/mykey.pub user@host
+
+Disable SSH root login
+    vi /etc/ssh/sshd_config     # set "PermitRootLogin no"
+    systemctl restart sshd      # restart ssh deamon
