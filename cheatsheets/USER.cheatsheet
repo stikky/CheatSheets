@@ -1,0 +1,5 @@
+adduser <username> [Group]      # Create new user
+
+su - <username>                 # Switch user
+
+usermod -aG sudo <username>     # Add user to group SUDO
