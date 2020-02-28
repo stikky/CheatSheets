@@ -2,6 +2,7 @@
 # Change CSPATH to your 'CheatSheets' folder location
 CSPATH='/home/gms/Projects/CheatSheets/cheatsheets'
 
+alias csfhs="cat $CSPATH/FHS.cheatsheet"
 alias csgit="cat $CSPATH/GIT.cheatsheet"
 alias cspacman="cat $CSPATH/PACMAN.cheatsheet"
 alias csssh="cat $CSPATH/SSH.cheatsheet"
