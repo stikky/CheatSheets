@@ -1,4 +1,4 @@
-Filesystem Hierarchy Standard
+Filesystem Hierarchy Standard (source: https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
 
 /               Primary hierarchy root and root directory of the entire file system hierarchy.
 /bin            Essential command binaries that need to be available in single user mode; for all users, e.g., cat, ls, cp.
@@ -14,7 +14,7 @@ Filesystem Hierarchy Standard
 /lost+found     After an unexpected shutdown, results of recovery operation will be stored here.
 /media          Mount points for removable media such as CD-ROMs.
 /mnt            Temporarily mounted filesystems.
-/opt            Optional application software packages.[6]
+/opt            Optional application software packages.
 /proc           Virtual filesystem providing process and kernel information as files.
 /root           Home directory for the root user.
 /run            Run-time variable data: Information about the running system since last boot
