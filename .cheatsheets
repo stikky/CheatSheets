@@ -1,6 +1,7 @@
 
 # Change CSPATH to your 'CheatSheets' folder location
-CSPATH='/home/gms/Projects/CheatSheets/cheatsheets'
+PROJECTSPATH='/home/gms/Projects'
+CSPATH='$PROJECTSPATH/CheatSheets/cheatsheets'
 
 alias cslist="ls $CSPATH/"
 
