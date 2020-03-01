@@ -1,0 +1,9 @@
+First Usage
+
+create user docker
+add user docker to group sudo
+
+Best Practice
+Create new user for each container since container user are always root.
+
+docker ps -a		Shows all container

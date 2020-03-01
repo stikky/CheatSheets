@@ -4,6 +4,7 @@ CSPATH='/home/gms/Projects/CheatSheets/cheatsheets'
 
 alias cslist="ls $CSPATH/"
 
+alias csdocker="cat $CSPATH/DOCKER"
 alias csfhs="cat $CSPATH/FHS"
 alias csgit="cat $CSPATH/GIT"
 alias cspacman="cat $CSPATH/PACMAN"
