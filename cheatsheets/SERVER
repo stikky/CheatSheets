@@ -1,0 +1,69 @@
+
+- Manage Users
+	neuen user erstellen
+	adduser <newuser> 	// Wrapper of useradd
+						// adduser erstellt homefolder und group
+	usermod –aG sudo <newuser> 	// neuen user zur sudo group hinzufügen
+								// das selbe wie??: adduser <newuser> sudo
+	groups <newuser>	// verify new user is in group
+	su – <newuser>	// change user, check if it works, ie: ls /root
+
+- Disable Root Login over ssh
+	edit /etc/ssh/sshd_config
+    set PermitRootLogin no
+	"SSH brute force attempts are often carried out on the root user of a server. Make sure to make the root user inaccessible via SSH by editing the sshd_config file. Set the ‘DenyUsers root’ and ‘PermitRootLogin no’ options.""
+
+- SSH KEY AUTHENTICATION
+	create key
+		mkdir –p $HOME/.ssh
+		chmod 0700 $HOME/.ssh
+		ssh –keygen –t rsa 4096
+	copy key to server
+		ssh-copy-id username@<server_IP>	// from client
+											// The system will copy the contents of the ~/.ssh/id_rsa.pub from the client system into the ~/.ssh/authorized_keys directory of the server system.
+		cat ~/.ssh/id_rsa.pub | ssh username@remote_host "mkdir -p ~/.ssh && touch ~/.ssh/authorized_keys && chmod -R go= ~/.ssh && cat >> ~/.ssh/authorized_keys"	// alternative zu ssh-copy-id
+	"Instead of a password, you can authenticate an SSH server using a pair of SSH keys, a better alternative to traditional logins. The keys carry many more bits than a password and are not easily cracked by most modern computers. The popular RSA 2048-bit encryption is equivalent to a 617-digit password."
+
+- Disable Password Authentication
+	sudo nano /etc/ssh/sshd_config	// edit: PasswordAuthentication no
+									// This step creates an added layer of security. If you’re the only person logging into the server, you can disable the password. The server will only accept a login with your private key to match the stored public key.
+	sudo systemctl restart ssh
+
+- CHANGE SSH PORTNUMBER
+	By default, SSH uses port 22
+	use port numbers between 1024 and 32,767
+	To switch to a non-standard port, edit the port line in your sshd_config file.
+
+- Disable Ping
+	Hide Server Information
+	Try to provide as little information about the underlying infrastructure as possible. The less is known about the server, the better.
+	Also, it is a good idea to hide version numbers of any software you have installed on the server. Often they reveal, by default, the exact release date which can aid hackers when searching for weaknesses. It is usually simple to remove this information by deleting it from the HTTP header of its greeting banner.
+
+
+
+
+- SECURE FILE TRANSFER PROTOCOL (FTPS)
+
+- Secure Sockets Layer Certificates
+	Secure your web administration areas and forms with Secure Socket Layer (SSL) that guards information passed between two systems via the internet. SSL can be used both in server-client and in server-server communication.
+	The program scrambles data so that sensitive information (such as names, IDs, credit card numbers, and other personal information) is not stolen in transit. Websites that have the SSL certificate have HTTPS in the URL, indicating they are secure.
+	Not only does the certificate encrypt data, but it is also used for user authentication. Therefore, by managing certificates for your servers, it helps establish user authority. Administrators can configure servers to communicate with centralized authority and any other certificate that the authority signs.
+
+- Use Private Networks and VPNs
+	Another way to ensure secure communication is to use private and virtual private networks (VPNs), and software such as OpenVPN. Unlike open networks which are accessible to the outside world and therefore susceptible to attacks from malicious users, private and virtual private networks restrict access to selected users.
+	Private networks use a private IP to establish isolated communication channels between servers within the same range. This allows multiple servers under the same account to exchange information and data without exposure to a public space.
+	When you want to connect to a remote server as if doing it locally through a private network, use a VPN. It enables an entirely secure and private connection and can encompass multiple remote servers. For the servers to communicate under the same VPN, they must share security and configuration data.
+
+- Monitor Login Attempts
+
+- Remove or Turn Off All Unnecessary Services
+	Increase server security by reducing the so-called attack vector.
+	This cyber-security term refers to installing and maintaining only the bare minimum requirements needed to keep your services running. Just enable the network ports used by the OS and installed components. The less you have on the system, the better.
+	A Windows OS server should only have required operating system components. A Linux operating system server should have a minimal installation with only the truly necessary packages installed.
+	Since most Linux distributions listen for incoming connections on the internet, you want to configure a firewall to allow only specific ports and deny all other unnecessary communication.
+	Check for dependencies before installing software on your system to ensure you are not adding anything you do not need. Additionally, inspect which dependencies were auto-started on your system and whether you want them there.
+
+
+
+	check running services
+		sudo ss -atpu
