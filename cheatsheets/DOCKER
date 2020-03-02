@@ -1,10 +1,22 @@
 First Usage
+1)  To create the docker group and add your user:
+        sudo groupadd docker                # Create the docker group.
+        sudo usermod -aG docker $USER       # Add your user to the docker group.
+        Log out and log back in so that your group membership is re-evaluated.
 
 create user docker
-add user docker to group sudo
+    add user docker to group sudo
 
 Best Practice
-Create new user for each container since container user are always root.
+    Create new user for each container since container user are always root.
+
+Create and link folder to container
+    mkdir -p /path/on/host
+    chown 1000:1000 /path/on/host
+    docker run -v /path/on/host:/data ...
+
+
+
 
 docker ps -a		Shows all container
 
