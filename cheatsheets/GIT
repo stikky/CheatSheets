@@ -4,6 +4,9 @@ git config --global user.email "[email address]"    Sets the email you want atta
 git config --global user.name "[name]"              Sets the name you want attached to your commit transactions
 git config *.*                                      Same as above but for single repositories.
 
+[user]
+    email = git@gms.fyi
+    name = stikky
 
 GIT_AUTHOR_NAME is the human-readable name in the author field.
 GIT_AUTHOR_EMAIL is the email for the author field.
