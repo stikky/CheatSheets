@@ -7,3 +7,5 @@ Best Practice
 Create new user for each container since container user are always root.
 
 docker ps -a		Shows all container
+
+docker exec -it some-container sh     # Run command inside a container
