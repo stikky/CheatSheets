@@ -7,6 +7,7 @@ alias cslist="ls $CSPATH/"
 
 alias csdocker="cat $CSPATH/DOCKER"
 alias csfhs="cat $CSPATH/FHS"
+alias csfind="cat $CSPATH/FIND"
 alias csgit="cat $CSPATH/GIT"
 alias cspacman="cat $CSPATH/PACMAN"
 alias csserver="cat $CSPATH/SERVER"
