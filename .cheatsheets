@@ -6,6 +6,7 @@ CSPATH='$PROJECTSPATH/CheatSheets/cheatsheets'
 alias cslist="ls $CSPATH/"
 
 alias csdocker="cat $CSPATH/DOCKER"
+alias csdd="cat $CSPATH/DD"
 alias csfhs="cat $CSPATH/FHS"
 alias csgit="cat $CSPATH/GIT"
 alias cspacman="cat $CSPATH/PACMAN"
