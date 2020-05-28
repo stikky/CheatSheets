@@ -15,3 +15,7 @@ GIT_AUTHOR_DATE is the timestamp used for the author field.
 GIT_COMMITTER_NAME sets the human name for the committer field.
 GIT_COMMITTER_EMAIL is the email address for the committer field.
 GIT_COMMITTER_DATE is used for the timestamp in the committer field.
+
+
+Aliases
+git config --global alias.lol "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
