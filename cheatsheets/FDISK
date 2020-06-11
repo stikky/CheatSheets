@@ -1,0 +1,15 @@
+Find the device
+    fdisk -l
+
+Delete existing partitions on the card.
+    fdisk /dev/mmcblk0
+
+    Command (m for help): p         # Check out partitions
+    Command (m for help): d         # Celete partitions
+    Command (m for help): n         # Create a new partition for the card
+    Command (m for help): t         # Make the type Fat32
+        Partition type (type L to list all types): b        # Changed type of partition 'FAT12' to 'W95 FAT32'.
+    Command (m for help): w         # Write the changes
+
+Now that fdisk has written the new parttion you need to format the drive.
+    mkfs.vfat /dev/mmcblk0p1
