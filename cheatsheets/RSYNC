@@ -1,0 +1,4 @@
+-va     # usefull for backup 
+    rsync -va path/to/local/files/ user@remote.host.net:/path/to/remote/folder
+
+--bwlimit=100
