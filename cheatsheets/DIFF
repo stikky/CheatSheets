@@ -1,0 +1,4 @@
+# Check differences in folders
+diff -rq --no-dereference /path/to/old/drive/ /path/to/new/drive/
+
+
