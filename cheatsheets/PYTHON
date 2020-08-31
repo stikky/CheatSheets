@@ -1,0 +1,7 @@
+VIRTUALENV
+python -m virtualenv ~/venv         # create virtualenv
+source ~/venv/bin/activate          # load virtualenv
+
+PIP
+pip freeze > requirements.txt       # create requirements file
+pip install -r requirements.txt     # install from requirements file
