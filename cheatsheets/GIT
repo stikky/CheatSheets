@@ -17,5 +17,11 @@ GIT_COMMITTER_EMAIL is the email address for the committer field.
 GIT_COMMITTER_DATE is used for the timestamp in the committer field.
 
 
+Reset local files to servers master/origin
+git fetch --all								# fetch to update all origin/<branch> refs to latest
+git checkout -b backup-master				# backup current branch
+git reset --hard origin/master 				# git reset --hard origin/<branch_name> if on another branch
+
+
 Aliases
 git config --global alias.lol "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
