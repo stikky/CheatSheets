@@ -4,6 +4,14 @@ git config --global user.email "[email address]"    Sets the email you want atta
 git config --global user.name "[name]"              Sets the name you want attached to your commit transactions
 git config *.*                                      Same as above but for single repositories.
 
+BRANCH
+git branch i55u3                # create new branch
+git checkout i55u3              # switch to branch
+git checkout -b i55u3           # create new branch and switch to new branch
+git merge i55u3                 # merge branch i55u3 to active branch
+git branch -d i55u3             # delete branch i55u3
+
+RESET
 Reset ADD-command before commit
 git reset
 
@@ -12,7 +20,7 @@ git fetch --all								# fetch to update all origin/<branch> refs to latest
 git checkout -b backup-master				# backup current branch
 git reset --hard origin/master 				# git reset --hard origin/<branch_name> if on another branch
 
-Aliases
+ALIASES
 git config --global alias.lol "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 
