@@ -4,6 +4,18 @@ git config --global user.email "[email address]"    Sets the email you want atta
 git config --global user.name "[name]"              Sets the name you want attached to your commit transactions
 git config *.*                                      Same as above but for single repositories.
 
+Reset ADD-command before commit
+git reset
+
+Reset local files to servers master/origin
+git fetch --all								# fetch to update all origin/<branch> refs to latest
+git checkout -b backup-master				# backup current branch
+git reset --hard origin/master 				# git reset --hard origin/<branch_name> if on another branch
+
+Aliases
+git config --global alias.lol "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+
 [user]
     email = git@gms.fyi
     name = stikky
@@ -15,13 +27,3 @@ GIT_AUTHOR_DATE is the timestamp used for the author field.
 GIT_COMMITTER_NAME sets the human name for the committer field.
 GIT_COMMITTER_EMAIL is the email address for the committer field.
 GIT_COMMITTER_DATE is used for the timestamp in the committer field.
-
-
-Reset local files to servers master/origin
-git fetch --all								# fetch to update all origin/<branch> refs to latest
-git checkout -b backup-master				# backup current branch
-git reset --hard origin/master 				# git reset --hard origin/<branch_name> if on another branch
-
-
-Aliases
-git config --global alias.lol "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
