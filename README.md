@@ -1,6 +1,6 @@
 # CheatSheets
-Simple Cheat Sheets for common command line tools.
-Does not claim to be complete nor to replace the manual. - Just a collection of commands.
+Simple collection of cheat sheets for use in the shell via aliases.
+Does not claim to be complete nor to replace the manual. - Just a collection of commands we have encountered.
 
 
 ## Installation
