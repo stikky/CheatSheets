@@ -1,5 +1,7 @@
 # CheatSheets
 Simple Cheat Sheets for common command line tools.
+Does not claim to be complete nor to replace the manual. - Just a collection of commands.
+
 
 ## Installation
 1. Clone repository
