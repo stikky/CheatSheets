@@ -1,3 +1,15 @@
+PIPENV
+# Wrapper virtualenv + pyenv
+pipenv --python 3.9                   # make a managed development environment with specific version of python
+pipenv shell                          # activate
+pipenv install                        # installs all requirements from Pipfile
+pipenv install <package>              # package installation within environment
+pipenv install -r ./requirements.txt  # install from file
+pipenv uninstall <package>            # uninstall package
+pipenv lock -r                        # check local packages
+pipenv check                          # check security vulnerabilities
+pipenv graph                          # check dependency graph
+
 VIRTUALENV
 python -m virtualenv ~/venv         # create virtualenv
 source ~/venv/bin/activate          # load virtualenv
@@ -5,3 +17,4 @@ source ~/venv/bin/activate          # load virtualenv
 PIP
 pip freeze > requirements.txt       # create requirements file
 pip install -r requirements.txt     # install from requirements file
+
