@@ -13,6 +13,8 @@ git merge i55u3                                 # merge branch i55u3 to active b
 git branch -d i55u3                             # delete branch i55u3 locally
 git push -d <remote_name> <branch_name>         # delete branch remotely
 
+git remote update origin --prune                # update branch list from remote
+
 
 RESET
 Reset ADD-command before commit
