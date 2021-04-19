@@ -15,6 +15,11 @@ git push -d <remote_name> <branch_name>         # delete branch remotely
 
 git remote update origin --prune                # update branch list from remote
 
+Add specific RSA key
+In ~/.ssh/config:                   # If the config file is new, you might need to do chmod 600 ~/.ssh/config
+Host github.com
+    HostName github.com
+    IdentityFile ~/.ssh/id_rsa_github
 
 RESET
 Reset ADD-command before commit
