@@ -28,3 +28,4 @@ Mirrors
 sudo pacman-mirrors --fasttrack                        Update mirrorlist with the fastest mirrors
 sudo pacman-mirrors --country Germany,France,Austria   Create a custom mirror pool using mirrors from Germany, France and Austria
 sudo pacman-mirrors --interactive --default
+sudo pacman-mirrors --country all --api --protocols all --set-branch stable && sudo pacman -Syyu Reset
