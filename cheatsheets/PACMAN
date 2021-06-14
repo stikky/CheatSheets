@@ -23,3 +23,8 @@ Other
 Command                 Description
 pactree <pkg>           What does pkg depend on?
 pactree -r <pkg>        What depends on pkg?
+
+Mirrors
+sudo pacman-mirrors --fasttrack                        Update mirrorlist with the fastest mirrors
+sudo pacman-mirrors --country Germany,France,Austria   Create a custom mirror pool using mirrors from Germany, France and Austria
+sudo pacman-mirrors --interactive --default
