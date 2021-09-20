@@ -10,8 +10,13 @@ Add your SSH private key to the ssh-agent. If you created your key with a differ
     $ ssh-add ~/.ssh/id_rsa
 
 Copy key to server
-    ssh-copy-id -i ~/.ssh/mykey.pub user@host
+    ssh-copy-id -i ~/.ssh/mykey.pub user@host       # -i identity file
 
 Disable SSH root login
     vi /etc/ssh/sshd_config     # set "PermitRootLogin no"
     systemctl restart sshd      # restart ssh deamon
+
+~/.ssh/id_rsa/config
+Host foo.bar
+ HostName foo.bar
+ IdentityFile ~/.ssh/id_rsa
