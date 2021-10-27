@@ -1,0 +1,3 @@
+/usr/local/Cellar/              # default installation folder
+/usr/local/opt/                 # symlink
+brew --prefix [package]         # show package installation folder
