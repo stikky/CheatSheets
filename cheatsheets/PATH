@@ -3,3 +3,12 @@ PATH
 printenv                                        # list environmental variables with values
 
 export PATH="${PATH}:/home/my_user/bin"         # add a directory to the PATH for local usage (put in ~/.bash_profile)
+
+
+Java specific:
+  Arch Linux
+    archlinux-java status
+    archlinux-java set <JAVA_ENV>
+  Ubuntu
+    update-alternatives
+    update-java-alternatives (not tested)
